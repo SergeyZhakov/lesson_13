@@ -1,0 +1,608 @@
+/* &display=swap*/
+@import url(null.css);
+
+
+.wrapper {
+	min-height: 100%;
+	overflow-x: hidden;
+	background: url("../img/cityblue.jpg") 0 0/1920px 1000px no-repeat ;
+}
+
+.car__container{
+	position: relative;
+}
+
+
+
+.car__animation{
+	transform: scale(0.5);
+	position: absolute;
+	left: 1150px;
+	top: 705px;
+	z-index: 10;
+	animation-name: ford;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-direction: reverse;
+	animation-iteration-count: infinite;
+}
+
+@keyframes ford {
+	0% {
+		left: -1000px;
+	}
+	
+	100% {
+		left: 1900px;
+	}
+
+}
+/* ========Крыша и стекло======= */
+
+.roof_left{
+	width: 200px;
+	height: 80px;
+	position: absolute;
+	background-color: rgb(194, 3, 3);;
+	top: 100px;
+	left: 400px;
+	transform: skew(-60deg,0deg);
+	border-radius: 20px 0px 0px 0px;
+	border: 2px solid rgb(138, 0, 0);
+
+}
+
+.roof__right{
+	width: 150px;
+	height: 80px;
+	position: absolute;
+	background-color: rgb(194, 3, 3);
+	top: 100px;
+	left: 660px;
+	transform: skew(60deg, 0deg);
+	border-radius: 0px 100px 0px 0px;
+	border: 2px solid rgb(138, 0, 0);
+}
+
+.roof__mirror-left {
+	width: 30px;
+	height: 70px;
+	position: absolute;
+	background-color: rgb(39, 34, 34);
+	border-radius: 55% 21% 4% 100% / 100% 100% 0% 0%;
+	top: 110px;
+	left: 388px;
+	transform: skew(-58deg, 0deg);
+	border: 4px solid #000;
+}
+
+.roof__mirror-left::before{
+	content: '';
+	width: 17px;
+	height: 30px;
+	z-index: 2;
+	background-color: rgb(148, 137, 137);
+	position: absolute;
+	border-radius: 55% 21% 4% 100% / 100% 100% 0% 0%;
+	top: 2px;
+	left: 4px;
+}
+.roof__mirror-center{
+	width: 215px;
+	height: 65px;
+	position: absolute;
+	background-color: rgb(65, 57, 57);
+	top: 115px;
+	left: 430px;
+	z-index: 3;
+	transform: skew(-56deg, 0deg);
+	border-radius: 20px 20px 0px 0px;
+	border: 4px solid #000;
+}
+
+.roof__mirror-center::before{
+	content: '';
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	background-color: rgb(148, 137, 137);
+	top: 2px;
+	left: 10px;
+	border-radius: 20px 20px 0px 0px;
+}
+.roof__mirror-right{
+	width: 230px;
+	height: 65px;
+	position: absolute;
+	background-color: rgb(65, 57, 57);
+	top: 115px;
+	left: 550px;
+	z-index: 2;
+	transform: skew(55deg, 0deg);
+	border-radius: 0px 100px 0px 0px;
+	border: 4px solid #000;
+	
+}
+/* ===============Зеркала и радиатор ======== */
+.frame__center{
+	width: 900px;
+	height: 140px;
+	background-color: rgb(194, 3, 3);
+	border-radius: 41% 19% 17% 9% / 69% 24% 26% 65%;
+	position: relative;
+	top: 179px;
+	left: 100px;
+	border: 2px solid rgb(138, 0, 0);
+}
+
+.frame__headlamp{
+	width: 50px;
+	height: 30px;
+	background-color: #fff;
+	border-radius: 100% 0% 100% 0% / 98% 0% 100% 0%;
+	position: absolute;
+	top: 215px;
+	left: 120px;
+	transform: rotate(15deg);
+	border: 2px solid rgb(182, 3, 3);
+}
+
+.frame__left::before{
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+	border-right: 5px solid rgb(156, 35, 35);
+	transform: rotate(27deg);
+	width: 30px;
+	height: 55px;
+	top: 250px;
+	left: 120px;
+	z-index: 2;
+}
+
+.frame__headlamp-small{
+	border-radius: 82% 10% 63% 39% / 57% 100% 10% 23%;
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	top: 250px;
+	left: 121px;
+	background-color: #fff;
+	border: 2px solid rgb(182, 3, 3);
+	transform: rotate(2deg);
+}
+.frame__radiator-big{
+	width: 23px;
+	height: 7px;
+	position: absolute;
+	top: 272px;
+	left: 125px;
+	background-color: #000;
+}
+.frame__radiator-medium{
+	width: 20px;
+	height: 7px;
+	position: absolute;
+	top: 281px;
+	left: 125px;
+	background-color: #000;
+}
+
+
+.frame__radiator-small{
+	width: 14px;
+	height: 7px;
+	position: absolute;
+	top: 290px;
+	left: 125px;
+	background-color: #000;
+}
+
+
+/* ===========Левая часть(шины) =========== */
+
+.frame__wheel-left{
+	width: 140px;
+	height: 140px;
+	background-color: #000;
+	position: absolute;
+	top: 230px;
+	left: 207px;
+	border-radius: 50%;
+	box-shadow:  0px 0px 5px #fff;
+	z-index: 8;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-name: rolling;
+}
+
+@keyframes rolling {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-360deg);
+	}
+
+}
+
+
+.frame__wheel-left::before{
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-color: rgb(54, 53, 53);
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	border-radius: 50%;
+	z-index: 3;
+}
+
+.frame__wheel-left::after {
+	content: '';
+	width: 30px;
+	height: 30px;
+	background-color: rgb(119, 9, 9);
+	position: absolute;
+	top: 55px;
+	left: 55px;
+	border-radius: 50%;
+	z-index: 5;
+}
+
+
+.frame__wheel-near{
+	width: 40px;
+	height: 15px;
+	background-color: #000;
+	border-radius: 69% 0% 37% 54% / 100% 0% 49% 0%;
+	position: absolute;
+	top: 304px;
+	left: 189px;
+	transform: skew(-60deg,1deg);
+}
+.frame__wheel-beside{
+	width: 40px;
+	height: 15px;
+	background-color: #000;
+	border-radius: 0% 100% 37% 54% / 100% 100% 0% 0%;
+	position: absolute;
+	top: 304px;
+	left: 333px;
+	transform: skew(60deg,-1deg);
+}
+
+.frame__disk-1 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(180deg);
+	z-index: 4;
+}
+
+.frame__disk-2 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(150deg);
+	z-index: 4;
+}
+
+.frame__disk-3 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(120deg);
+	z-index: 4;
+}
+
+.frame__disk-4 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(90deg);
+	z-index: 4;
+}
+
+.frame__disk-5 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(60deg);
+	z-index: 4;
+}
+
+.frame__disk-6 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(30deg);
+	z-index: 4;
+}
+
+.frame__center-door{
+	width: 255px;
+	height: 140px;
+	background-color: rgb(194, 3, 3);
+	position: absolute;
+	top: -20px;
+	left: 257px;
+	border-radius: 81% 64% 37% 4% / 39% 35% 52% 26%;
+	border: 4px solid	rgb(138, 0, 0);
+}
+
+.frame__center-handle{
+	width: 50px;
+	height: 17px;
+	border: 3px solid rgb(138, 0, 0);
+	position: absolute;
+	border-radius: 40%;
+	top: 10px;
+	left: 430px;
+}
+.frame__center-door::after{
+	content: '';
+	width: 17px;
+	height: 5px;
+	background-color: rgba(49, 6, 6, 0.842);
+	position: absolute;
+	border-radius: 40%;
+	top: 32px;
+	left: 195px;
+	z-index: 5;
+}
+
+
+
+/* ============Правая часть =============== */
+.frame__wheel-right {
+	width: 140px;
+	height: 140px;
+	background-color: #000;
+	position: absolute;
+	top: 230px;
+	left: 757px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px #fff;
+	z-index: 8;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-name: rolling;
+	}
+	
+	@keyframes rolling {
+		0% {
+			transform: rotate(0deg);
+		}
+	
+		100% {
+			transform: rotate(-360deg);
+		}
+	
+	}
+
+.frame__wheel-right::before {
+	content: '';
+	width: 100px;
+	height: 100px;
+	background-color: rgb(54, 53, 53);
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	border-radius: 50%;
+	z-index: 3;
+}
+
+.frame__wheel-right::after {
+	content: '';
+	width: 30px;
+	height: 30px;
+	background-color: rgb(119, 9, 9);
+	position: absolute;
+	top: 55px;
+	left: 55px;
+	border-radius: 50%;
+	z-index: 5;
+}
+
+.frame__disk-7 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(180deg);
+	z-index: 4;
+}
+
+.frame__disk-8 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(150deg);
+	z-index: 4;
+}
+
+.frame__disk-9 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(120deg);
+	z-index: 4;
+}
+
+.frame__disk-10 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(90deg);
+	z-index: 4;
+}
+
+.frame__disk-11 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(60deg);
+	z-index: 4;
+}
+
+.frame__disk-12 {
+	width: 98px;
+	height: 3px;
+	position: absolute;
+	top: 68px;
+	left: 21px;
+	background-color: rgb(243, 181, 181);
+	transform: rotate(30deg);
+	z-index: 4;
+}
+
+.frame__wheel-down {
+	width: 40px;
+	height: 15px;
+	background-color: #000;
+	border-radius: 69% 0% 37% 54% / 100% 0% 49% 0%;
+	position: absolute;
+	top: 304px;
+	left: 739px;
+	transform: skew(-60deg, 1deg);
+}
+
+.frame__wheel-back {
+	width: 40px;
+	height: 15px;
+	background-color: #000;
+	border-radius: 0% 100% 37% 54% / 100% 100% 0% 0%;
+	position: absolute;
+	top: 304px;
+	left: 883px;
+	transform: skew(60deg, -1deg);
+}
+
+.frame__headlight{
+	width: 60px;
+	height: 40px;
+	position: absolute;
+	top: 204px;
+	left: 939px;
+	border-radius: 50% 100% 37% 51% / 100% 0% 0% 83%;
+	background-color: rgb(112, 88, 88);
+}
+.frame__headlight-red{
+	width: 45px;
+	height: 10px;
+	position: absolute;
+	top: 3px;
+	right: 0px;
+	background-color: rgb(255, 1, 1);
+	border-radius: 40%;
+}
+
+.frame__headlight-yellow{
+	width: 45px;
+	height: 10px;
+	position: absolute;
+	top: 15px;
+	right: 0px;
+	background-color: rgb(255, 208, 0);
+	border-radius: 40%;
+}
+
+.frame__headlight-white {
+width: 45px;
+height: 10px;
+position: absolute;
+top: 27px;
+right: 0px;
+background-color: #fff;
+border-radius: 40%;
+}
+
+.car__road{
+	width: 1920px;
+	height: 133px;
+	position: absolute;
+	top: 830px;
+	left: 0;
+	background-color: rgb(49, 43, 43);
+}
+
+.car__stripe{
+	width: 1920px;
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background-color: #fff;
+}
+
+.airplane{
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	animation-name: airplane-fly;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+	
+	@keyframes airplane-fly{
+		0% {
+			left: -100px;
+			top: 300px;
+		}
+	
+		100% {
+			left: 1730px;
+			top: -150px;
+		}
+	
+	}
+
+	.airplane::before{
+		content: '';
+		position: absolute;
+		top: -199px;
+		left: -159px;
+		width: 300px;
+		height: 300px;
+		background: url('../img/smoke.gif') 0 0 / 80px no-repeat;
+		transform: rotate(-115deg);
+	}
